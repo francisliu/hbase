@@ -121,7 +121,7 @@ pipeline {
         }
         stage ('hadoop 2 cache') {
           environment {
-            HADOOP2_VERSION="2.8.5"
+            HADOOP2_VERSION="2.10.0"
           }
           steps {
             // directory must be unique for each parallel stage, because jenkins runs them in the same workspace :(
@@ -658,6 +658,7 @@ pipeline {
                   --hbase-client-install "hbase-client" \
                   "hbase-install" \
                   "hadoop-2/bin/hadoop" \
+                  hadoop-2/share/hadoop/yarn/timelineservice \
                   hadoop-2/share/hadoop/yarn/test/hadoop-yarn-server-tests-*-tests.jar \
                   hadoop-2/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-*-tests.jar \
                   hadoop-2/bin/mapred \
