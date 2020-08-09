@@ -1147,7 +1147,7 @@ public final class HConstants {
   // should be dealt with in a separate handler in case blocking other region's transition.
   public static final String MASTER_META_TRANSITION_HANDLER_COUNT =
       "hbase.master.meta.transition.handler.count";
-  public static final int MASTER__META_TRANSITION_HANDLER_COUNT_DEFAULT = 1;
+  public static final int MASTER__META_TRANSITION_HANDLER_COUNT_DEFAULT = 2;
 
   @Deprecated // unused. see HBASE-10569. remove this in 3.0
   public static final String MASTER_HANDLER_COUNT = "hbase.master.handler.count";

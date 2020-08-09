@@ -89,7 +89,7 @@ public class MasterAnnotationReadingPriorityFunction extends AnnotationReadingPr
         if (rst.getRegionInfoList() != null) {
           for (HBaseProtos.RegionInfo info : rst.getRegionInfoList()) {
             TableName tn = ProtobufUtil.toTableName(info.getTableName());
-            if (TableName.META_TABLE_NAME.equals(tn)) {
+            if (TableName.META_TABLE_NAME.equals(tn) || TableName.ROOT_TABLE_NAME.equals(tn)) {
               return META_TRANSITION_QOS;
             }
           }
